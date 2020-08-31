@@ -24,8 +24,7 @@ namespace BinarySearchTreeDemo
             myList.Add(node4);
             myList.Add(node5);
 
-            BinarySearchTree add = new BinarySearchTree();
-            add.Add();
+           
         }
     }
 }

@@ -12,7 +12,9 @@ namespace BinarySearchTreeDemo
         public int Data;
         public Node RightNode;
         public Node LeftNode;
-        public Node Parent; 
+        public Node Parent;
+        
+        
 
         public Node(int data)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -11,14 +12,15 @@ namespace BinarySearchTreeDemo
     class BinarySearchTree
     {
         public Node RootNode;
-        
+        //public Node nodeToAdd;
 
-        public void Add(Node nodeToAdd)
+        public void Add(int item)
         {
             Node tempNode;
+            Node nodeToAdd = new Node(item);
             if (RootNode == null)
             {
-                RootNode = nodeToAdd;
+                RootNode = new Node(item);
             }
             else if (RootNode != null)
             {
@@ -50,6 +52,22 @@ namespace BinarySearchTreeDemo
                 }
             }
             
+        }
+
+        public void Search(Node nodeToAdd)
+        {
+            this.nodeToAdd = nodeToAdd;
+            Node currentNode = RootNode;
+            bool isEqual = false;
+            if(RootNode.Data.Equals(nodeToAdd))
+            {
+                isEqual = true;
+            }
+            while (nodeToAdd < currentNode.Data)
+            {
+                currentNode = currentNode.LeftNode ;
+                if()
+            }
         }
     }
 }
